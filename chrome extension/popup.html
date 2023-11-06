@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster:400|Raleway:300,400,500&display=swap" rel="stylesheet">
+
+    <style>
+        .popup {
+            min-width: 344px;
+            min-height: 188px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-family: "Lobster";
+            text-align: center;
+        }
+
+        .yellow {
+            color: #585454;
+        }
+
+        .blue {
+            color: #0c0ca9;
+        }
+
+        p {
+            font-family: "Raleway", sans-serif;
+            font-size: 0.75rem;
+        }
+
+        .button {
+    background-color: #828a8a;
+    position: relative;
+    height: 2rem;
+    width: 6rem; /* Adjusted width for better visibility of the text */
+    border-radius: 25px;
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition on color change */
+    font-family: "Raleway", sans-serif;
+    color: #fff; /* Text color */
+    text-align: center;
+    line-height: 2rem; /* Centering text vertically */
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+}
+
+.button:hover {
+    background-color: #5e6e7d; /* Darker background on hover */
+}
+
+        .half {
+            position: absolute;
+            width: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            background-color: rgb(67, 61, 61);
+            pointer-events: none;
+            transition: 1s;
+        }
+
+        @keyframes transformToBlue {
+            0% {
+                background-color: #10100f;
+            }
+
+            100% {
+                background-color: #0d0d0d;
+            }
+        }
+
+        @keyframes transformToYellow {
+            0% {
+                background-color: #575b5e;
+            }
+
+            100% {
+                background-color: #080808;
+            }
+        }
+
+        @keyframes moveCircleRight {
+            0% {
+                left: 0;
+                transform: translateX(0);
+                background-color: rgb(78, 75, 75);
+            }
+
+            100% {
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: #588BE4;
+            }
+        }
+
+        @keyframes moveCircleLeft {
+            0% {
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: #588BE4;
+            }
+
+            100% {
+                left: 0;
+                transform: translateX(0);
+                background-color: rgb(110, 106, 106);
+            }
+        }
+        .description {
+            font-family: "Times New Roman", serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 10px;
+    color: #585353; /* Text color */
+    text-shadow: 1px 1px 1px #000; /* Adjust the shadow values for the embossed effect */
+}
+.aligned-left {
+    text-align: left;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="popup">
+        <h1 class="aligned-left">
+            <span class="yellow">Twilight</span><span class="blue">Transform</span>
+        </h1>
+        
+        <p class="description">
+            Bored of looking at websites the same way? Meet Twilight Transform, an extension that can change your website from dark mode to light mode and vice versa! :)
+        </p>
+        
+
+        <div class="button">
+            <div class="half" style="left: 5px;">On</div>
+            <div class="half" style="right: 5px; text-align: right;">Off</div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script src="./popup.js"></script>
+</body>
+
+</html>
